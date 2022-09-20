@@ -49,4 +49,9 @@ public class JobTest {
 
 
     }
+    @Test
+    public void testToString() {
+        Job object6 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
+    assertEquals("ID:5\nName: Product tester\nEmployer: ACME\nLocation: Desert\nPositionType: Quality Control\nCoreCompetency: Persistence", object6.toString());
+    }
 }
