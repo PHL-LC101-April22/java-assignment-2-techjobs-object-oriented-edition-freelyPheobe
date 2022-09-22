@@ -88,7 +88,22 @@ public class Job {
 
     @Override
     public String toString() {
-        return "ID: " + getId() + "\nName: " + getName() + "\nEmployer: " + getEmployer() + "\nLocation: " + getLocation() + "\nPosition type: " + getPositionType() + "\nCoreCompetency: " + getCoreCompetency();
+        String output = "";
+        if (name.equals("")) {name = "Data not available";}
+
+        if (employer.getValue().equals("") || employer.getValue() == null) {
+            employer.setValue("Data not available");
+        }
+        if (location.getValue().equals("") || location.getValue() == null) {
+            location.setValue("Data not available");
+        }
+        if (coreCompetency.getValue().equals("") || coreCompetency.getValue() == null) {
+            coreCompetency.setValue("Data not available");
+        }
+        if (positionType.getValue().equals("") || positionType.getValue() ==null) {
+            positionType.setValue("Data not available");
+        }
+        return "\nID: " + getId() + "\nName: " + getName() + "\nEmployer: " + getEmployer() + "\nLocation: " + getLocation() + "\nPosition Type: " + getPositionType() + "\nCore Competency: " + getCoreCompetency() + "\n";
     }
     // TODO: Add two constructors - one to initialize a unique ID and a second to initialize the
     //  other five fields. The second constructor should also call the first in order to initialize
