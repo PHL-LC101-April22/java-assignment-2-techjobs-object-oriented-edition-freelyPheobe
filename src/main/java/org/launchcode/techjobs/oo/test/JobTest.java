@@ -32,13 +32,13 @@ public class JobTest {
         assertTrue(object3.getName() instanceof String);
         assertEquals("Product tester", object3.getName());
         assertTrue(object3.getEmployer() instanceof Employer);
-        assertEquals("ACME", object3.getEmployer().getClass());
+        assertEquals("ACME", object3.getEmployer().getValue());
         assertTrue(object3.getLocation() instanceof Location);
-        assertEquals("Desert", object3.getLocation().getClass());
+        assertEquals("Desert", object3.getLocation().getValue());
         assertTrue(object3.getPositionType() instanceof PositionType);
-        assertEquals("Quality control", object3.getPositionType().getClass());
+        assertEquals("Quality control", object3.getPositionType().getValue());
         assertTrue(object3.getCoreCompetency() instanceof CoreCompetency);
-        assertEquals("Persistence", object3.getCoreCompetency().getClass());
+        assertEquals("Persistence", object3.getCoreCompetency().getValue());
     }
 
     @Test
